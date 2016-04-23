@@ -9,13 +9,14 @@ import java.util.ResourceBundle;
  * Created by pg on 23/04/16.
  */
 public class SolarPanels extends AbstractRoom {
-    public static final int ENERGY_DELTA = 10;
+    public static final int ENERGY_DELTA = 5;
+    public static final int ENERGY_DELTA_PER_LEVEL = 3;
     public static final int UPGRADE_TIME = 50;
     public static final int ACTION_TIME = 10;
 
     @Override
     public void getResourcesChange(BaseResources baseResources, int timePassed) {
-        defaultEnergySubtract(baseResources);
+        baseResources.getEnergy().add(ENERGY_DELTA + ENERGY_DELTA_PER_LEVEL * level);
     }
 
     @Override

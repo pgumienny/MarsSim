@@ -2,11 +2,27 @@ package com.marssim.rooms;
 
 import com.marssim.Astronaut;
 import com.marssim.BaseResources;
+import com.marssim.Property;
 
 /**
  * Created by pg on 23/04/16.
  */
 public class Greenhouse extends AbstractRoom {
+    private Property numberOfPlants;
+
+
+    public Greenhouse() {
+        super();
+        this.numberOfPlants = new Property();
+    }
+
+    public Property getNumberOfPlants() {
+        return numberOfPlants;
+    }
+
+    public void setNumberOfPlants(Property numberOfPlants) {
+        this.numberOfPlants = numberOfPlants;
+    }
 
     @Override
     public void getResourcesChange(BaseResources baseResources, int timeTicksPassed) {

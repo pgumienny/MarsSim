@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.marssim.views.RoomView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:fitsSystemWindows="true">
+
+     <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/bedroom"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.marssim.MarsBase"
+        tools:showIn="@layout/activity_mars_base">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BASE"
+            android:id="@+id/buttonBase"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/buttonUpgrade"
+            android:layout_alignLeft="@+id/textViewRest"
+            android:layout_alignStart="@+id/textViewRest" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPGRADE"
+            android:id="@+id/buttonUpgrade"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Satiety"
+            android:id="@+id/textViewSatiety"
+            android:layout_below="@+id/buttonBase"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Rest"
+            android:id="@+id/textViewRest"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/buttonBase"
+            android:layout_toRightOf="@+id/progressBarSatiety"
+            android:layout_toEndOf="@+id/progressBarSatiety" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Health"
+            android:id="@+id/textViewHeatlh"
+            android:textColor="#ffffff"
+            android:layout_alignBottom="@+id/progressBarRest"
+            android:layout_toRightOf="@+id/progressBarRest"
+            android:layout_toEndOf="@+id/progressBarRest" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Entertainment"
+            android:id="@+id/textViewEntertainment"
+            android:textColor="#ffffff"
+            android:layout_alignBottom="@+id/progressBarHealth"
+            android:layout_toRightOf="@+id/progressBarHealth"
+            android:layout_toEndOf="@+id/progressBarHealth" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarSatiety"
+            android:layout_below="@+id/buttonBase"
+            android:layout_toRightOf="@+id/textViewSatiety"
+            android:layout_toEndOf="@+id/textViewSatiety" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarRest"
+            android:layout_below="@+id/buttonBase"
+            android:layout_toRightOf="@+id/textViewRest"
+            android:layout_toEndOf="@+id/textViewRest" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarHealth"
+            android:layout_below="@+id/buttonBase"
+            android:layout_toRightOf="@+id/textViewHeatlh"
+            android:layout_toEndOf="@+id/textViewHeatlh" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarEntertainment"
+            android:layout_alignBottom="@+id/textViewRest"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RETURN"
+            android:id="@+id/buttonReturn"
+            android:layout_alignTop="@+id/buttonBase"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/buttonBase"
+            android:layout_toLeftOf="@+id/buttonBase"
+            android:layout_alignRight="@+id/progressBarSatiety"
+            android:layout_alignEnd="@+id/progressBarSatiety" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INSTRUCTIONS"
+            android:id="@+id/buttonInstructions"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/progressBarEntertainment"
+            android:layout_alignEnd="@+id/progressBarEntertainment" />
+
+    </RelativeLayout>
+
+
+</com.marssim.views.RoomView>

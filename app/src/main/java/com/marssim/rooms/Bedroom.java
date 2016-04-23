@@ -2,6 +2,7 @@ package com.marssim.rooms;
 
 import com.marssim.Astronaut;
 import com.marssim.BaseResources;
+import com.marssim.Const;
 
 /**
  * Created by pg on 23/04/16.
@@ -9,7 +10,7 @@ import com.marssim.BaseResources;
 public class Bedroom extends AbstractRoom {
     @Override
     public void getResourcesChange(BaseResources baseResources, int timeTicksPassed) {
-
+        defaultEnergySubtract(baseResources);
     }
 
     @Override

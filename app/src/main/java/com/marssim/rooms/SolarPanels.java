@@ -10,7 +10,17 @@ public class SolarPanels extends AbstractRoom {
     public static final int ENERGY_DELTA = 10;
 
     @Override
-    public void getResourcesChange(Astronaut astronaut, BaseResources baseResources) {
+    public void getResourcesChange(BaseResources baseResources, int timePassed) {
         baseResources.getEnergy().add(ENERGY_DELTA);
+    }
+
+    @Override
+    public int doAction(Astronaut astronaut) {
+        return 1;
+    }
+
+    @Override
+    public int upgrade() {
+        return 1;
     }
 }

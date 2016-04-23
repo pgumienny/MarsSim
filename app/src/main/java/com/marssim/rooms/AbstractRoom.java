@@ -26,7 +26,7 @@ public abstract class AbstractRoom {
      * modifies Astronaut
      * @return time that has passed doing the action
      */
-    public abstract int upgrade(Astronaut astronaut);
+    public abstract int upgrade(Astronaut astronaut, BaseResources resources);
 
     public int getCondition() {
         return condition;

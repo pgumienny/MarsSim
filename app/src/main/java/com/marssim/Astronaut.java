@@ -1,5 +1,7 @@
 package com.marssim;
 
+import com.marssim.rooms.AbstractRoom;
+
 /**
  * Created by pg on 23/04/16.
  */
@@ -8,6 +10,7 @@ public class Astronaut {
     Property wellRested;
     Property psychicalShape;
     Property entertainmentLevel;
+    AbstractRoom location;
 
     public Astronaut() {
         satiety = new Property();
@@ -47,4 +50,13 @@ public class Astronaut {
     public void setPsychicalShape(Property psychicalShape) {
         this.psychicalShape = psychicalShape;
     }
+
+    public AbstractRoom getLocation() {
+        return location;
+    }
+
+    public void setLocation(AbstractRoom location) {
+        this.location = location;
+    }
+
 }

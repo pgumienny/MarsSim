@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.marssim.R;
 
 /**
  * Created by pg on 23/04/16.

@@ -8,14 +8,14 @@ import com.marssim.rooms.AbstractRoom;
 public class Astronaut {
     Property satiety;
     Property wellRested;
-    Property psychicalShape;
+    Property health;
     Property entertainmentLevel;
     AbstractRoom location;
 
     public Astronaut() {
         satiety = new Property();
         wellRested = new Property();
-        psychicalShape = new Property();
+        health = new Property();
         entertainmentLevel = new Property();
     }
 
@@ -43,12 +43,12 @@ public class Astronaut {
         this.wellRested = wellRested;
     }
 
-    public Property getPsychicalShape() {
-        return psychicalShape;
+    public Property getHealth() {
+        return health;
     }
 
-    public void setPsychicalShape(Property psychicalShape) {
-        this.psychicalShape = psychicalShape;
+    public void setHealth(Property health) {
+        this.health = health;
     }
 
     public AbstractRoom getLocation() {

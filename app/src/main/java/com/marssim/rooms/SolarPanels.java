@@ -15,7 +15,7 @@ public class SolarPanels extends AbstractRoom {
 
     @Override
     public void getResourcesChange(BaseResources baseResources, int timePassed) {
-        baseResources.getEnergy().add(ENERGY_DELTA * level);
+        defaultEnergySubtract(baseResources);
     }
 
     @Override

@@ -3,12 +3,13 @@ package com.marssim.rooms;
 import com.marssim.Astronaut;
 import com.marssim.BaseResources;
 
+import java.io.Serializable;
 import java.util.ResourceBundle;
 
 /**
  * Created by pg on 23/04/16.
  */
-public class SolarPanels extends AbstractRoom {
+public class SolarPanels extends AbstractRoom implements Serializable{
     public static final int ENERGY_DELTA = 5;
     public static final int ENERGY_DELTA_PER_LEVEL = 3;
     public static final int UPGRADE_TIME = 50;

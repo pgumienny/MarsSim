@@ -15,8 +15,8 @@ import java.util.List;
 /**
  * Created by pg on 23/04/16.
  */
-public class RoomCollection {
-    public List<AbstractRoom> rooms;
+public class RoomCollection implements java.io.Serializable {
+    public ArrayList<AbstractRoom> rooms;
 
     public RoomCollection() {
         rooms = new ArrayList<>();

@@ -3,7 +3,7 @@ package com.marssim;
 /**
  * Created by pg on 23/04/16.
  */
-public class Property {
+public class Property implements java.io.Serializable {
     public static final float MAX_VALUE = 100;
     private float value;
     private float max;

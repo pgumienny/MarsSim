@@ -5,12 +5,12 @@ import com.marssim.rooms.AbstractRoom;
 /**
  * Created by pg on 23/04/16.
  */
-public class Astronaut {
+public class Astronaut implements java.io.Serializable {
     Property satiety;
     Property wellRested;
     Property health;
     Property entertainmentLevel;
-    AbstractRoom location;
+//    AbstractRoom location;
 
     public Astronaut() {
         satiety = new Property();
@@ -51,12 +51,12 @@ public class Astronaut {
         this.health = health;
     }
 
-    public AbstractRoom getLocation() {
-        return location;
-    }
-
-    public void setLocation(AbstractRoom location) {
-        this.location = location;
-    }
+//    public AbstractRoom getLocation() {
+//        return location;
+//    }
+//
+//    public void setLocation(AbstractRoom location) {
+//        this.location = location;
+//    }
 
 }

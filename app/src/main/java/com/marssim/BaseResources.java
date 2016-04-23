@@ -5,7 +5,7 @@ import com.marssim.Const;
 /**
  * Created by pg on 23/04/16.
  */
-public class BaseResources {
+public class BaseResources implements java.io.Serializable{
 
     Property energy;
     Property water;

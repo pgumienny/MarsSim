@@ -1,0 +1,78 @@
+package com.marssim;
+
+/**
+ * Created by pg on 23/04/16.
+ */
+public class GameState implements java.io.Serializable {
+    private RoomCollection roomCollection;
+    private BaseResources baseResources;
+    private Astronaut astronaut;
+    private Integer ticksPassed;
+
+    public Integer getTicksPassed() {
+        return ticksPassed;
+    }
+
+    public void setTicksPassed(Integer ticksPassed) {
+        this.ticksPassed = ticksPassed;
+    }
+
+    public GameState() {
+        roomCollection = new RoomCollection();
+        baseResources = new BaseResources();
+        astronaut = new Astronaut();
+        ticksPassed = 0;
+    }
+
+    public RoomCollection getRoomCollection() {
+        return roomCollection;
+    }
+
+    public void setRoomCollection(RoomCollection roomCollection) {
+        this.roomCollection = roomCollection;
+    }
+
+    public BaseResources getBaseResources() {
+        return baseResources;
+    }
+
+    public void setBaseResources(BaseResources baseResources) {
+        this.baseResources = baseResources;
+    }
+
+    public Astronaut getAstronaut() {
+        return astronaut;
+    }
+
+    public void setAstronaut(Astronaut astronaut) {
+        this.astronaut = astronaut;
+    }
+
+    private String twoDecUtil(int x){
+        return String.format("%02d", x);
+    }
+
+    public String getTimeString(){
+        int decimals = ticksPassed % 10;
+        int seconds = (ticksPassed / 10) % 60;
+        int minutes = (ticksPassed / (60*10)) % 60;
+        int hours = (ticksPassed / (60*60*10)) % 24;
+        int days = (ticksPassed / (24*60*60*10));
+        StringBuilder strb = new StringBuilder();
+        strb.append(days);
+        strb.append(":");
+        strb.append(twoDecUtil(hours));
+        strb.append(":");
+        strb.append(twoDecUtil(minutes));
+        strb.append(":");
+        strb.append(twoDecUtil(seconds));
+        strb.append(":");
+        strb.append(decimals);
+        return strb.toString();
+    }
+
+    public void tick(){
+        ticksPassed++;
+    }
+
+}

@@ -9,7 +9,7 @@ import com.marssim.BaseResources;
 public class Laboratory extends AbstractRoom {
     @Override
     public void getResourcesChange(BaseResources baseResources, int timeTicksPassed) {
-
+        defaultEnergySubtract(baseResources);
     }
 
     @Override

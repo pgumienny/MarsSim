@@ -4,25 +4,206 @@
     android:layout_height="match_parent"
     android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/room_description"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Solar panel room"/>
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/bedroom"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.marssim.MarsBase"
+        tools:showIn="@layout/activity_mars_base">
 
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:max="100"
-        android:progress="50"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/button2"
+            android:allowUndo="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:max="100"
-        android:progress="50"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonGreenhouse"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/ikona_laboratorium"
+            android:layout_below="@+id/progressBarSatiety"
+            android:layout_alignRight="@+id/progressBarSatiety"
+            android:layout_alignEnd="@+id/progressBarSatiety" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonSolarPanels"
+            android:src="@drawable/ikona_silownia"
+            android:layout_below="@+id/imageButtonGreenhouse"
+            android:layout_alignLeft="@+id/imageButtonGreenhouse"
+            android:layout_alignStart="@+id/imageButtonGreenhouse" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonGym"
+            android:layout_alignRight="@+id/imageButtonSolarPanels"
+            android:layout_alignEnd="@+id/imageButtonSolarPanels"
+            android:layout_below="@+id/imageButtonSolarPanels"
+            android:src="@drawable/ikona_sypialnia" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonLaboratory"
+            android:layout_below="@+id/imageButtonGym"
+            android:layout_alignRight="@+id/imageButtonGym"
+            android:layout_alignEnd="@+id/imageButtonGym"
+            android:src="@drawable/ikona_szklarnia" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonWorkshop"
+            android:layout_below="@+id/imageButtonLaboratory"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ikona_szklarnia" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonEntertainmentRoom"
+            android:layout_below="@+id/imageButtonWorkshop"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ikona_sypialnia" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonBedroom"
+            android:layout_below="@+id/imageButtonEntertainmentRoom"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ikona_laboratorium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/textViewTime"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/textViewNotification"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Satiety"
+            android:id="@+id/textViewSatiety"
+            android:layout_below="@+id/button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Rest"
+            android:id="@+id/textViewRest"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/button"
+            android:layout_toRightOf="@+id/progressBarSatiety"
+            android:layout_toEndOf="@+id/progressBarSatiety" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Health"
+            android:id="@+id/textViewHeatlh"
+            android:textColor="#ffffff"
+            android:layout_alignBottom="@+id/progressBarRest"
+            android:layout_toRightOf="@+id/progressBarRest"
+            android:layout_toEndOf="@+id/progressBarRest" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Entertainment"
+            android:id="@+id/textViewEntertainment"
+            android:textColor="#ffffff"
+            android:layout_alignBottom="@+id/progressBarHealth"
+            android:layout_toRightOf="@+id/progressBarHealth"
+            android:layout_toEndOf="@+id/progressBarHealth" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarSatiety"
+            android:layout_below="@+id/button"
+            android:layout_toRightOf="@+id/textViewSatiety"
+            android:layout_toEndOf="@+id/textViewSatiety" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarRest"
+            android:layout_below="@+id/button"
+            android:layout_toRightOf="@+id/textViewRest"
+            android:layout_toEndOf="@+id/textViewRest" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarHealth"
+            android:layout_below="@+id/button"
+            android:layout_toRightOf="@+id/textViewHeatlh"
+            android:layout_toEndOf="@+id/textViewHeatlh" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarSatiety"
+            android:layout_alignBottom="@+id/textViewRest"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
 
 </com.marssim.views.RoomView>

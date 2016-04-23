@@ -19,7 +19,7 @@
         android:text="BASE"
         android:id="@+id/buttonBase"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/buttonUpgrade"
+        android:layout_toLeftOf="@+id/buttonRooms"
         android:allowUndo="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SETTINGS"
-        android:id="@+id/buttonUpgrade"
+        android:id="@+id/buttonRooms"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true" />
@@ -215,5 +215,16 @@
         android:layout_alignBottom="@+id/textViewRest"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/textViewSatiety"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/astronautGIF"
+        android:layout_toLeftOf="@+id/imageButtonGreenhouse"
+        android:layout_toStartOf="@+id/imageButtonGreenhouse" />
 
 </RelativeLayout>

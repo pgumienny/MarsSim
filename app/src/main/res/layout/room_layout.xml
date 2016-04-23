@@ -10,8 +10,7 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:background="@drawable/bedroom"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.marssim.MarsBase"
-        tools:showIn="@layout/activity_mars_base">
+        >
 
         <Button
             android:layout_width="wrap_content"
@@ -19,7 +18,7 @@
             android:text="BASE"
             android:id="@+id/buttonBase"
             android:layout_alignParentTop="true"
-            android:layout_toLeftOf="@+id/buttonUpgrade"
+            android:layout_toLeftOf="@+id/buttonRooms"
             android:layout_alignLeft="@+id/textViewRest"
             android:layout_alignStart="@+id/textViewRest" />
 
@@ -27,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="UPGRADE"
-            android:id="@+id/buttonUpgrade"
+            android:id="@+id/buttonRooms"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true" />
@@ -83,7 +82,8 @@
             android:id="@+id/progressBarSatiety"
             android:layout_below="@+id/buttonBase"
             android:layout_toRightOf="@+id/textViewSatiety"
-            android:layout_toEndOf="@+id/textViewSatiety" />
+            android:layout_toEndOf="@+id/textViewSatiety"
+            android:background="#ffffff" />
 
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
@@ -92,7 +92,8 @@
             android:id="@+id/progressBarRest"
             android:layout_below="@+id/buttonBase"
             android:layout_toRightOf="@+id/textViewRest"
-            android:layout_toEndOf="@+id/textViewRest" />
+            android:layout_toEndOf="@+id/textViewRest"
+            android:background="#ffffff" />
 
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
@@ -101,7 +102,8 @@
             android:id="@+id/progressBarHealth"
             android:layout_below="@+id/buttonBase"
             android:layout_toRightOf="@+id/textViewHeatlh"
-            android:layout_toEndOf="@+id/textViewHeatlh" />
+            android:layout_toEndOf="@+id/textViewHeatlh"
+            android:background="#ffffff" />
 
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
@@ -110,7 +112,8 @@
             android:id="@+id/progressBarEntertainment"
             android:layout_alignBottom="@+id/textViewRest"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:background="#ffffff" />
 
         <Button
             android:layout_width="wrap_content"

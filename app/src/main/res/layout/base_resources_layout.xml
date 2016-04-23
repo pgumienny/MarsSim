@@ -24,125 +24,237 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BASE"
-            android:id="@+id/buttonBase"
-            android:layout_alignParentTop="true"
-            android:layout_toLeftOf="@+id/buttonUpgrade"
-            android:layout_alignLeft="@+id/textViewRest"
-            android:layout_alignStart="@+id/textViewRest" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="UPGRADE"
-            android:id="@+id/buttonUpgrade"
+            android:text="ROOMS"
+            android:id="@+id/buttonRooms"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Satiety"
-            android:id="@+id/textViewSatiety"
-            android:layout_below="@+id/buttonBase"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Rest"
-            android:id="@+id/textViewRest"
-            android:textColor="#ffffff"
-            android:layout_below="@+id/buttonBase"
-            android:layout_toRightOf="@+id/progressBarSatiety"
-            android:layout_toEndOf="@+id/progressBarSatiety" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Health"
-            android:id="@+id/textViewHeatlh"
-            android:textColor="#ffffff"
-            android:layout_alignBottom="@+id/progressBarRest"
-            android:layout_toRightOf="@+id/progressBarRest"
-            android:layout_toEndOf="@+id/progressBarRest" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Entertainment"
-            android:id="@+id/textViewEntertainment"
-            android:textColor="#ffffff"
-            android:layout_alignBottom="@+id/progressBarHealth"
-            android:layout_toRightOf="@+id/progressBarHealth"
-            android:layout_toEndOf="@+id/progressBarHealth" />
-
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/progressBarSatiety"
-            android:layout_below="@+id/buttonBase"
-            android:layout_toRightOf="@+id/textViewSatiety"
-            android:layout_toEndOf="@+id/textViewSatiety" />
-
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/progressBarRest"
-            android:layout_below="@+id/buttonBase"
-            android:layout_toRightOf="@+id/textViewRest"
-            android:layout_toEndOf="@+id/textViewRest" />
-
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/progressBarHealth"
-            android:layout_below="@+id/buttonBase"
-            android:layout_toRightOf="@+id/textViewHeatlh"
-            android:layout_toEndOf="@+id/textViewHeatlh" />
-
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/progressBarEntertainment"
-            android:layout_alignBottom="@+id/textViewRest"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentStart="true" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="RETURN"
             android:id="@+id/buttonReturn"
-            android:layout_alignTop="@+id/buttonBase"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/buttonBase"
-            android:layout_toLeftOf="@+id/buttonBase"
-            android:layout_alignRight="@+id/progressBarSatiety"
-            android:layout_alignEnd="@+id/progressBarSatiety" />
+            android:layout_alignParentStart="true" />
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="INSTRUCTIONS"
-            android:id="@+id/buttonInstructions"
-            android:layout_alignParentBottom="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Energy"
+            android:id="@+id/textViewEnergyLayer"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/buttonReturn"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/progressBarEntertainment"
-            android:layout_alignEnd="@+id/progressBarEntertainment" />
+            android:singleLine="false"
+            android:textColor="#ffffff" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarEnergy"
+            android:layout_below="@+id/textViewEnergyLayer"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/textViewEnergy"
+            android:layout_toStartOf="@+id/textViewEnergy"
+            android:background="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50/100"
+            android:id="@+id/textViewEnergy"
+            android:layout_below="@+id/textViewEnergyLayer"
+            android:layout_alignRight="@+id/buttonRooms"
+            android:layout_alignEnd="@+id/buttonRooms"
+            android:textIsSelectable="false"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Hydrogen"
+            android:id="@+id/textViewHydrogenLayer"
+            android:layout_marginTop="28dp"
+            android:singleLine="false"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/progressBarEnergy"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarHydrogen"
+            android:background="#ffffff"
+            android:layout_below="@+id/textViewHydrogenLayer"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/progressBarEnergy"
+            android:layout_alignEnd="@+id/progressBarEnergy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50/100"
+            android:id="@+id/textViewHydrogen"
+            android:textIsSelectable="false"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/textViewHydrogenLayer"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Oxygen"
+            android:id="@+id/textViewOxygenLayer"
+            android:layout_marginTop="26dp"
+            android:singleLine="false"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/progressBarHydrogen"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarOxygen"
+            android:background="#ffffff"
+            android:layout_below="@+id/textViewOxygenLayer"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/progressBarHydrogen"
+            android:layout_alignEnd="@+id/progressBarHydrogen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50/100"
+            android:id="@+id/textViewOxygen"
+            android:textIsSelectable="false"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/textViewOxygenLayer"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Development"
+            android:id="@+id/textViewDevelopmentLayer"
+            android:layout_marginTop="28dp"
+            android:singleLine="false"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/progressBarOxygen"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarDevelopment"
+            android:background="#ffffff"
+            android:layout_below="@+id/textViewDevelopmentLayer"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/progressBarOxygen"
+            android:layout_alignEnd="@+id/progressBarOxygen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50/100"
+            android:id="@+id/textViewDevelopment"
+            android:textIsSelectable="false"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/textViewDevelopmentLayer"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Food"
+            android:id="@+id/textViewFoodLayer"
+            android:layout_marginTop="24dp"
+            android:singleLine="false"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/progressBarDevelopment"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarFood"
+            android:background="#ffffff"
+            android:layout_below="@+id/textViewFoodLayer"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/progressBarDevelopment"
+            android:layout_alignEnd="@+id/progressBarDevelopment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50/100"
+            android:id="@+id/textViewFood"
+            android:textIsSelectable="false"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/textViewFoodLayer"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Water"
+            android:id="@+id/textViewWaterLayer"
+            android:layout_marginTop="26dp"
+            android:singleLine="false"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/progressBarFood"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarWater"
+            android:background="#ffffff"
+            android:layout_below="@+id/textViewWaterLayer"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/textViewWater"
+            android:layout_toStartOf="@+id/textViewWater" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50/100"
+            android:id="@+id/textViewWater"
+            android:textIsSelectable="false"
+            android:textColor="#ffffff"
+            android:layout_alignTop="@+id/progressBarWater"
+            android:layout_alignRight="@+id/textViewFood"
+            android:layout_alignEnd="@+id/textViewFood" />
 
     </RelativeLayout>
 

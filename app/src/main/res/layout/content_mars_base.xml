@@ -19,7 +19,7 @@
         android:text="BASE"
         android:id="@+id/buttonBase"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/buttonSettings"
+        android:layout_toLeftOf="@+id/buttonUpgrade"
         android:allowUndo="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SETTINGS"
-        android:id="@+id/buttonSettings"
+        android:id="@+id/buttonUpgrade"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true" />

@@ -12,8 +12,13 @@
     tools:context="com.marssim.MarsBase"
     tools:showIn="@layout/activity_mars_base">
 
-    <TextView
+    <ListView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_height="wrap_content">
+        <com.marssim.views.RoomView
+            android:id ="@+id/room_layout1"
+            android:layout_width ="wrap_content"
+            android:layout_height ="wrap_content" />
+
+    </ListView>
 </RelativeLayout>

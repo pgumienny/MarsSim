@@ -7,7 +7,7 @@ import com.marssim.Const;
 /**
  * Created by pg on 23/04/16.
  */
-public abstract class AbstractRoom {
+public abstract class AbstractRoom implements java.io.Serializable {
     int condition;
     int level;
 

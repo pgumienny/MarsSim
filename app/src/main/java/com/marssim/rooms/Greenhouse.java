@@ -4,10 +4,12 @@ import com.marssim.Astronaut;
 import com.marssim.BaseResources;
 import com.marssim.Property;
 
+import java.io.Serializable;
+
 /**
  * Created by pg on 23/04/16.
  */
-public class Greenhouse extends AbstractRoom {
+public class Greenhouse extends AbstractRoom implements Serializable{
     private Property numberOfPlants;
 
 

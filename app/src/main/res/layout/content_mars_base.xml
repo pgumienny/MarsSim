@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageButton"
         android:layout_marginTop="50dp"
-        android:src="@android:drawable/btn_star"
+        android:src="@drawable/ikona_laboratorium"
         android:layout_below="@+id/progressBar4"
         android:layout_alignRight="@+id/progressBar4"
         android:layout_alignEnd="@+id/progressBar4" />
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton2"
-        android:src="@android:drawable/ic_btn_speak_now"
+        android:src="@drawable/ikona_silownia"
         android:layout_below="@+id/imageButton"
         android:layout_alignLeft="@+id/imageButton"
         android:layout_alignStart="@+id/imageButton" />
@@ -58,7 +58,8 @@
         android:id="@+id/imageButton3"
         android:layout_alignRight="@+id/imageButton2"
         android:layout_alignEnd="@+id/imageButton2"
-        android:layout_below="@+id/imageButton2" />
+        android:layout_below="@+id/imageButton2"
+        android:src="@drawable/ikona_sypialnia" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -66,7 +67,8 @@
         android:id="@+id/imageButton4"
         android:layout_below="@+id/imageButton3"
         android:layout_alignRight="@+id/imageButton3"
-        android:layout_alignEnd="@+id/imageButton3" />
+        android:layout_alignEnd="@+id/imageButton3"
+        android:src="@drawable/ikona_szklarnia" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -74,7 +76,8 @@
         android:id="@+id/imageButton5"
         android:layout_below="@+id/imageButton4"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ikona_szklarnia" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -82,7 +85,8 @@
         android:id="@+id/imageButton6"
         android:layout_below="@+id/imageButton5"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ikona_sypialnia" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -90,7 +94,8 @@
         android:id="@+id/imageButton7"
         android:layout_below="@+id/imageButton6"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ikona_laboratorium" />
 
     <TextView
         android:layout_width="wrap_content"

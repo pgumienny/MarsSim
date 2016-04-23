@@ -5,5 +5,5 @@ package com.marssim;
  */
 public abstract class Const {
     public static final float TICKS_PER_HOUR = 60*60*10;
-    public static final String GAME_PACKAGE = "com.marssim.app";
+    public static final String GAME_PACKAGE = "Zoria.save";
 }

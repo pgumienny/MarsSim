@@ -10,7 +10,6 @@ public class Astronaut implements java.io.Serializable {
     Property wellRested;
     Property health;
     Property entertainmentLevel;
-//    AbstractRoom location;
 
     public Astronaut() {
         satiety = new Property();
@@ -51,12 +50,16 @@ public class Astronaut implements java.io.Serializable {
         this.health = health;
     }
 
-//    public AbstractRoom getLocation() {
-//        return location;
-//    }
-//
-//    public void setLocation(AbstractRoom location) {
-//        this.location = location;
-//    }
+
+    // glod 2/h
+    // zdrowie 0.5/h
+    // sen 1/h
+    // rozrywka
+    public void deteriorate(int numberOfTicksPassed, int numberOfTickTotal){
+        satiety.subtract(2/Const.TICKS_PER_HOUR);
+        health.subtract(0.5f/Const.TICKS_PER_HOUR);
+        wellRested.subtract(1/Const.TICKS_PER_HOUR);
+        entertainmentLevel.subtract((0.5f + numberOfTickTotal) / Const.TICKS_PER_HOUR);
+    }
 
 }

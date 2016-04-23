@@ -73,6 +73,9 @@ public class GameState implements java.io.Serializable {
 
     public void tick(){
         ticksPassed++;
+        astronaut.deteriorate(1, ticksPassed);
+        roomCollection.passTime(baseResources, 1);
+        baseResources.deteriorate(1);
     }
 
 }

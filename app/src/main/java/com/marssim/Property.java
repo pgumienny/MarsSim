@@ -9,6 +9,7 @@ public class Property implements java.io.Serializable {
     private float max;
 
     public Property() {
+        this.value = 50;
         this.max = MAX_VALUE;
     }
 
@@ -24,5 +25,21 @@ public class Property implements java.io.Serializable {
 
     public void subtract(float operand) {
         add(-1 * operand);
+    }
+
+    public float getValue() {
+        return value;
+    }
+
+    public void setValue(float value) {
+        this.value = value;
+    }
+
+    public float getMax() {
+        return max;
+    }
+
+    public void setMax(float max) {
+        this.max = max;
     }
 }

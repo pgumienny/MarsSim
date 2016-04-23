@@ -5,6 +5,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
@@ -31,14 +32,33 @@ public class MarsBase extends AppCompatActivity {
                     @Override
                     public void run() {
                         gameState.tick();
-                        TextView tt1 = (TextView) findViewById(R.id.textViewTime);
-                        tt1.setText(gameState.getTimeString());
+                        updateViews();
                     }
                 });
             }
         };
         timer.scheduleAtFixedRate(timerTask, 0, 100);
 
+    }
+
+    private void updateViews(){
+        // time
+        TextView tt1 = (TextView) findViewById(R.id.textViewTime);
+        tt1.setText(gameState.getTimeString());
+
+        Astronaut astronaut = gameState.getAstronaut();
+
+        updateProgressBar(R.id.progressBarEntertainment, astronaut.getEntertainmentLevel());
+        updateProgressBar(R.id.progressBarHealth, astronaut.getHealth());
+        updateProgressBar(R.id.progressBarRest, astronaut.getWellRested());
+        updateProgressBar(R.id.progressBarSatiety, astronaut.getSatiety());
+
+    }
+
+    private void updateProgressBar(int id, Property prop){
+        ProgressBar pb = (ProgressBar) findViewById(id);
+        pb.setMax((int) prop.getMax());
+        pb.setProgress((int) prop.getValue());
     }
 
     @Override

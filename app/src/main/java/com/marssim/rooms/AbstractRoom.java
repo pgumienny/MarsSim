@@ -13,7 +13,20 @@ public abstract class AbstractRoom {
     /**
       * modifies Astronaut and BaseResources, simulating one step in martian base simulation
       */
-    public abstract void getResourcesChange(Astronaut astronaut, BaseResources baseResources);
+    public abstract void getResourcesChange(BaseResources baseResources, int timeTicksPassed);
+
+    /**
+     * modifies Astronaut
+     * @return time that has passed doing the action
+     */
+    public abstract int doAction(Astronaut astronaut);
+
+
+    /**
+     * modifies Astronaut
+     * @return time that has passed doing the action
+     */
+    public abstract int upgrade(Astronaut astronaut);
 
     public int getCondition() {
         return condition;

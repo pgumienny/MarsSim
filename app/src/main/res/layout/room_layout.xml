@@ -144,21 +144,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageViewAstronaut"
-        android:layout_below="@+id/textViewSatiety"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:src="@drawable/astronaut1"
-        android:layout_above="@+id/buttonInstructions"
         android:layout_toLeftOf="@+id/progressBarHealth"
-        android:layout_toStartOf="@+id/progressBarHealth" />
+        android:layout_toEndOf="@+id/progressBarRest"
+        android:layout_alignTop="@+id/imageViewFeature"
+        android:layout_alignBottom="@+id/imageViewFeature"
+        android:layout_alignLeft="@+id/textViewHeatlh"
+        android:layout_alignStart="@+id/textViewHeatlh" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageViewFeature"
+        android:src="@drawable/maly_lazik"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/progressBarHealth"
-        android:layout_alignStart="@+id/progressBarHealth"
-        android:src="@drawable/maly_lazik" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/textViewHeatlh"
+        android:layout_toLeftOf="@+id/textViewHeatlh" />
 
 </RelativeLayout>

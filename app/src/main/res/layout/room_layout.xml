@@ -147,7 +147,7 @@
         android:layout_below="@+id/textViewSatiety"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/astronautEat"
+        android:src="@drawable/astronaut1"
         android:layout_above="@+id/buttonInstructions" />
 
 </RelativeLayout>

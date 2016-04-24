@@ -225,7 +225,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageViewAstronaut"
         android:layout_alignTop="@+id/imageButtonGreenhouse"
-        android:src="@drawable/astronautGym"
+        android:src="@drawable/astronaut2"
         android:layout_toLeftOf="@+id/imageButtonGreenhouse"
         android:layout_toStartOf="@+id/imageButtonGreenhouse" />
 

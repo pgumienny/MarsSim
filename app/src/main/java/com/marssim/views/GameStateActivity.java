@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
@@ -28,6 +29,9 @@ public class GameStateActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        gameState = GameState.getGameState();
+
         setContentView(R.layout.base_resources_layout);
 
         Button btnReturn = (Button) findViewById(R.id.buttonReturn);
@@ -58,12 +62,16 @@ public class GameStateActivity extends Activity {
             }
         };
 
+        timer.scheduleAtFixedRate(timerTask, 0, 100);
+
     }
 
     private void updateViews(){
         // time
         TextView tt1 = (TextView) findViewById(R.id.textViewTime);
-        tt1.setText(gameState.getTimeString());
+        if(tt1 != null) {
+            tt1.setText(gameState.getTimeString());
+        }
 
         Astronaut astronaut = gameState.getAstronaut();
         BaseResources baseResources = gameState.getBaseResources();
@@ -78,6 +86,7 @@ public class GameStateActivity extends Activity {
         updateResourcesWithProp(R.id.textViewOxygen, R.id.progressBarOxygen, baseResources.getOxygen());
         updateResourcesWithProp(R.id.textViewDevelopment, R.id.progressBarDevelopment, baseResources.getTechnologyPoints());
         updateResourcesWithProp(R.id.textViewWater, R.id.progressBarWater, baseResources.getWater());
+        updateResourcesWithProp(R.id.textViewHydrogen, R.id.progressBarHydrogen, baseResources.getHydrogen());
 
     }
 
@@ -98,7 +107,7 @@ public class GameStateActivity extends Activity {
         if(tv == null) return;
         StringBuilder sb = new StringBuilder();
         sb.append((int) prop.getValue());
-        sb.append(" out of ");
+        sb.append("/");
         sb.append((int) prop.getMax());
         tv.setText(sb.toString());
     }

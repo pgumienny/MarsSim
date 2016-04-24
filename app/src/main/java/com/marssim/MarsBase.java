@@ -68,17 +68,21 @@ public class MarsBase extends AppCompatActivity {
 
     private void updateTextView(int id, Property prop){
         TextView tv = (TextView) findViewById(id);
-        StringBuilder sb = new StringBuilder();
-        sb.append((int) prop.getValue());
-        sb.append('/');
-        sb.append((int) prop.getMax());
-        tv.setText(sb.toString());
+        if(tv != null) {
+            StringBuilder sb = new StringBuilder();
+            sb.append((int) prop.getValue());
+            sb.append('/');
+            sb.append((int) prop.getMax());
+            tv.setText(sb.toString());
+        }
     }
 
     private void updateProgressBar(int id, Property prop){
         ProgressBar pb = (ProgressBar) findViewById(id);
-        pb.setMax((int) prop.getMax());
-        pb.setProgress((int) prop.getValue());
+        if (pb != null) {
+            pb.setMax((int) prop.getMax());
+            pb.setProgress((int) prop.getValue());
+        }
     }
 
     @Override

@@ -49,6 +49,14 @@ public class MarsBase extends AppCompatActivity {
         timer.scheduleAtFixedRate(timerTask, 0, 100);
         setButtonListenerGreenHouse();
 
+        setRoomListener(R.id.imageButtonBedroom, 0);
+        setRoomListener(R.id.imageButtonDining, 1);
+        setRoomListener(R.id.imageButtonEntertainmentRoom, 2);
+        setRoomListener(R.id.imageButtonGym, 3);
+        setRoomListener(R.id.imageButtonLaboratory, 4);
+        setRoomListener(R.id.imageButtonSolarPanels, 5);
+        setRoomListener(R.id.imageButtonWorkshop, 6);
+
     }
 
     private void setButtonListenerGreenHouse(){
@@ -76,6 +84,23 @@ public class MarsBase extends AppCompatActivity {
             public void onClick(View arg0) {
                 //Starting a new Intent
                 Intent nextScreen = new Intent(getApplicationContext(), BaseActivity.class);
+                startActivity(nextScreen);
+            }
+        });
+
+
+
+    }
+
+    private void setRoomListener(int id, final int room_number){
+        ImageButton button = (ImageButton) findViewById(id);
+
+        button.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View arg0) {
+                //Starting a new Intent
+                GameState.getGameState().setCurrentRoomId(room_number);
+                Intent nextScreen = new Intent(getApplicationContext(), RoomAcitivity.class);
                 startActivity(nextScreen);
             }
         });

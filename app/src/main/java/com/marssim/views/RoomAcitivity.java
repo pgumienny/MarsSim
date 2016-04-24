@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.marssim.Astronaut;
 import com.marssim.GameState;
@@ -60,8 +61,10 @@ public class RoomAcitivity extends GameStateActivity {
                 //Closing SecondScreen Activity
                 AbstractRoom currentRoom = GameState.getGameState().getRoomCollection().getRooms().get(GameState.getGameState().getCurrentRoomId());
                 currentRoom.upgrade(GameState.getGameState().getAstronaut(), GameState.getGameState().getBaseResources());
+                Toast.makeText(getBaseContext(), "Room upgrated", Toast.LENGTH_SHORT).show();
             }
         });
+
 
     }
 }

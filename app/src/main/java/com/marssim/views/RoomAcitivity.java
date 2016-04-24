@@ -60,17 +60,8 @@ public class RoomAcitivity extends GameStateActivity {
 
             public void onClick(View arg0) {
                 //Closing SecondScreen Activity
-
-
                 AbstractRoom currentRoom = GameState.getGameState().getRoomCollection().getRooms().get(GameState.getGameState().getCurrentRoomId());
                 currentRoom.upgrade(GameState.getGameState().getAstronaut(), GameState.getGameState().getBaseResources());
-
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getApplicationContext());
-                alertDialogBuilder.setTitle("Zoria");
-                alertDialogBuilder.setMessage("room upgraded");
-                AlertDialog alertDialog = alertDialogBuilder.create();
-                alertDialog.show();
-
             }
         });
 

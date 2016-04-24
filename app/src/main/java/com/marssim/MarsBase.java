@@ -1,12 +1,18 @@
 package com.marssim;
 
+import android.content.Intent;
 import android.os.Handler;
 import java.util.Timer;
 import java.util.TimerTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.marssim.views.BaseActivity;
+import com.marssim.views.RoomAcitivity;
 
 
 public class MarsBase extends AppCompatActivity {
@@ -20,7 +26,7 @@ public class MarsBase extends AppCompatActivity {
         restoreState();
 
         if (gameState == null) {
-            gameState = new GameState();
+            gameState = GameState.getGameState();
         }
 
         final Handler handler = new Handler();
@@ -38,6 +44,30 @@ public class MarsBase extends AppCompatActivity {
             }
         };
         timer.scheduleAtFixedRate(timerTask, 0, 100);
+
+        Button btnNextScreen = (Button) findViewById(R.id.buttonRooms);
+
+        //Listening to button event
+        btnNextScreen.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View arg0) {
+                //Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), RoomAcitivity.class);
+                startActivity(nextScreen);
+
+            }
+        });
+
+        Button baseButton = (Button) findViewById(R.id.buttonBase);
+
+        baseButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View arg0) {
+                //Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), BaseActivity.class);
+                startActivity(nextScreen);
+            }
+        });
 
     }
 

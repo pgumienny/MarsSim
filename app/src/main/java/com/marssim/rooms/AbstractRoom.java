@@ -3,6 +3,7 @@ package com.marssim.rooms;
 import com.marssim.Astronaut;
 import com.marssim.BaseResources;
 import com.marssim.Const;
+import com.marssim.R;
 
 /**
  * Created by pg on 23/04/16.
@@ -15,6 +16,10 @@ public abstract class AbstractRoom implements java.io.Serializable {
       * modifies Astronaut and BaseResources, simulating one step in martian base simulation
       */
     public abstract void getResourcesChange(BaseResources baseResources, int timeTicksPassed);
+
+    public int getImage(){
+        return R.drawable.mala_bawialnia;
+    }
 
     /**
      * modifies Astronaut

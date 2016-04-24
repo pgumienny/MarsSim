@@ -3,6 +3,7 @@ package com.marssim.rooms;
 import com.marssim.Astronaut;
 import com.marssim.BaseResources;
 import com.marssim.Const;
+import com.marssim.R;
 
 import java.io.Serializable;
 
@@ -13,6 +14,11 @@ public class Bedroom extends AbstractRoom implements Serializable{
     @Override
     public void getResourcesChange(BaseResources baseResources, int timeTicksPassed) {
         defaultEnergySubtract(baseResources);
+    }
+
+    @Override
+    public int getImage(){
+        return R.drawable.mala_sypialnia;
     }
 
     @Override

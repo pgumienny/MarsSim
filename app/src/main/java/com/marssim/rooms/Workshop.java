@@ -2,6 +2,7 @@ package com.marssim.rooms;
 
 import com.marssim.Astronaut;
 import com.marssim.BaseResources;
+import com.marssim.R;
 
 import java.io.Serializable;
 
@@ -23,4 +24,10 @@ public class Workshop extends AbstractRoom implements Serializable{
     public int upgrade(Astronaut astronaut, BaseResources resources) {
         return 0;
     }
+
+    @Override
+    public int getImage(){
+        return R.drawable.maly_warsztat;
+    }
+
 }

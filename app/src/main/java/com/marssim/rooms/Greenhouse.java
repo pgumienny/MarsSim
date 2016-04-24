@@ -3,6 +3,7 @@ package com.marssim.rooms;
 import com.marssim.Astronaut;
 import com.marssim.BaseResources;
 import com.marssim.Property;
+import com.marssim.R;
 
 import java.io.Serializable;
 
@@ -16,6 +17,11 @@ public class Greenhouse extends AbstractRoom implements Serializable{
     public Greenhouse() {
         super();
         this.numberOfPlants = new Property();
+    }
+
+    @Override
+    public int getImage(){
+        return R.drawable.szklarnia;
     }
 
     public Property getNumberOfPlants() {

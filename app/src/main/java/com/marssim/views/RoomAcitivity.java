@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ import com.marssim.Astronaut;
 import com.marssim.GameState;
 import com.marssim.Property;
 import com.marssim.R;
+import com.marssim.rooms.AbstractRoom;
 
 
 /**
@@ -39,16 +41,29 @@ public class RoomAcitivity extends GameStateActivity {
         setContentView(R.layout.room_layout);
         super.onCreate(savedInstanceState);
 
+        ImageView img = (ImageView) findViewById(R.id.imageViewFeature);
+
+        int imgres;
+
+        AbstractRoom currentRoom2 = GameState.getGameState().getRoomCollection().getRooms().get(GameState.getGameState().getCurrentRoomId());
+
+        img.setImageResource(currentRoom2.getImage());
+
         Button btnReturn = (Button) findViewById(R.id.buttonRooms);
 
         Intent i = getIntent();
+
+
 
         // Binding Click event to Button
         btnReturn.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View arg0) {
                 //Closing SecondScreen Activity
-                GameState.getGameState().getRoomCollection().getRooms().get(GameState.getGameState().getCurrentRoomId()).upgrade(GameState.getGameState().getAstronaut(), GameState.getGameState().getBaseResources());
+
+
+                AbstractRoom currentRoom = GameState.getGameState().getRoomCollection().getRooms().get(GameState.getGameState().getCurrentRoomId());
+                currentRoom.upgrade(GameState.getGameState().getAstronaut(), GameState.getGameState().getBaseResources());
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getApplicationContext());
                 alertDialogBuilder.setTitle("Zoria");

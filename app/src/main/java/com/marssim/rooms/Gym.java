@@ -2,6 +2,7 @@ package com.marssim.rooms;
 
 import com.marssim.Astronaut;
 import com.marssim.BaseResources;
+import com.marssim.R;
 
 import java.io.Serializable;
 
@@ -17,6 +18,11 @@ public class Gym extends AbstractRoom implements Serializable{
     @Override
     public int doAction(Astronaut astronaut) {
         return 0;
+    }
+
+    @Override
+    public int getImage(){
+        return R.drawable.mala_silownia;
     }
 
     @Override

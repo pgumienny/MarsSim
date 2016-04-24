@@ -2,6 +2,7 @@ package com.marssim.rooms;
 
 import com.marssim.Astronaut;
 import com.marssim.BaseResources;
+import com.marssim.R;
 
 import java.io.Serializable;
 import java.util.ResourceBundle;
@@ -30,5 +31,10 @@ public class SolarPanels extends AbstractRoom implements Serializable{
         level++;
         resources.getTechnologyPoints().add(-20);
         return UPGRADE_TIME;
+    }
+
+    @Override
+    public int getImage(){
+        return R.drawable.panele_sloneczne;
     }
 }

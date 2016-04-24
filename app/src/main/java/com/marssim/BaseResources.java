@@ -12,6 +12,16 @@ public class BaseResources implements java.io.Serializable{
     Property oxygen;
     Property technologyPoints;
     Property food;
+    Property hydrogen;
+
+
+    public Property getHydrogen() {
+        return hydrogen;
+    }
+
+    public void setHydrogen(Property hydrogen) {
+        this.hydrogen = hydrogen;
+    }
 
     public BaseResources() {
         energy = new Property();
@@ -19,6 +29,7 @@ public class BaseResources implements java.io.Serializable{
         oxygen = new Property();
         technologyPoints = new Property();
         food = new Property();
+        hydrogen = new Property();
     }
 
     // tlen 2 j/h

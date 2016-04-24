@@ -4,6 +4,8 @@ package com.marssim;
  * Created by pg on 23/04/16.
  */
 public class GameState implements java.io.Serializable {
+    private static GameState gameState;
+
     private RoomCollection roomCollection;
     private BaseResources baseResources;
     private Astronaut astronaut;
@@ -17,11 +19,18 @@ public class GameState implements java.io.Serializable {
         this.ticksPassed = ticksPassed;
     }
 
-    public GameState() {
+    private GameState() {
         roomCollection = new RoomCollection();
         baseResources = new BaseResources();
         astronaut = new Astronaut();
         ticksPassed = 0;
+    }
+
+    static public GameState getGameState(){
+        if(gameState == null){
+            gameState = new GameState();
+        }
+        return gameState;
     }
 
     public RoomCollection getRoomCollection() {

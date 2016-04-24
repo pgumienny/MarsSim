@@ -13,7 +13,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.marssim.views.RoomView;
+import com.marssim.views.BaseActivity;
+import com.marssim.views.RoomAcitivity;
 
 
 public class MarsBase extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class MarsBase extends AppCompatActivity {
         restoreState();
 
         if (gameState == null) {
-            gameState = new GameState();
+            gameState = GameState.getGameState();
         }
 
         final Handler handler = new Handler();
@@ -54,11 +55,28 @@ public class MarsBase extends AppCompatActivity {
 
         final ImageButton btnGreenHouse = (ImageButton)findViewById(R.id.imageButtonGreenhouse);
 
-        // Set up onClick listeners for buttons to send 1 or 0 to turn on/off LED
-        btnGreenHouse.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent act2 = new Intent(v.getContext(),RoomView.class);
-                startActivity(act2);
+
+        Button btnNextScreen = (Button) findViewById(R.id.buttonRooms);
+
+        //Listening to button event
+        btnNextScreen.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View arg0) {
+                //Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), RoomAcitivity.class);
+                startActivity(nextScreen);
+
+            }
+        });
+
+        Button baseButton = (Button) findViewById(R.id.buttonBase);
+
+        baseButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View arg0) {
+                //Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), BaseActivity.class);
+                startActivity(nextScreen);
             }
         });
     }

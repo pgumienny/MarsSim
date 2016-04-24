@@ -22,6 +22,12 @@ public class Bedroom extends AbstractRoom implements Serializable{
     }
 
     @Override
+    public int getButton(){
+        return R.id.imageButtonBedroom;
+    }
+
+
+    @Override
     public int doAction(Astronaut astronaut) {
         return 0;
     }

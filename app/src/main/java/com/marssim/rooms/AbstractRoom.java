@@ -21,6 +21,10 @@ public abstract class AbstractRoom implements java.io.Serializable {
         return R.drawable.mala_bawialnia;
     }
 
+    public int getButton(){
+        return R.id.imageButtonBedroom;
+    }
+
     /**
      * modifies Astronaut
      * @return time that has passed doing the action

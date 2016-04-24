@@ -2,6 +2,9 @@ package com.marssim;
 
 import android.content.Intent;
 import android.os.Handler;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 import android.os.Bundle;
@@ -13,6 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.marssim.rooms.AbstractRoom;
 import com.marssim.views.BaseActivity;
 import com.marssim.views.RoomAcitivity;
 
@@ -49,13 +53,11 @@ public class MarsBase extends AppCompatActivity {
         timer.scheduleAtFixedRate(timerTask, 0, 100);
         setButtonListenerGreenHouse();
 
-        setRoomListener(R.id.imageButtonBedroom, 0);
-        setRoomListener(R.id.imageButtonDining, 1);
-        setRoomListener(R.id.imageButtonEntertainmentRoom, 2);
-        setRoomListener(R.id.imageButtonGym, 3);
-        setRoomListener(R.id.imageButtonLaboratory, 4);
-        setRoomListener(R.id.imageButtonSolarPanels, 5);
-        setRoomListener(R.id.imageButtonWorkshop, 6);
+        List<AbstractRoom> rooms = gameState.getRoomCollection().getRooms();
+
+        for(int i = 0; i < rooms.size(); i++){
+            setRoomListener(rooms.get(i).getButton(), i);
+        }
 
     }
 

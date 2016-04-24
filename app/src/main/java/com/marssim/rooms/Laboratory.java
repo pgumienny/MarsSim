@@ -30,4 +30,8 @@ public class Laboratory extends AbstractRoom implements Serializable{
         return R.drawable.male_laboratorium;
     }
 
+    @Override
+    public int getButton(){
+        return R.id.imageButtonLaboratory;
+    }
 }

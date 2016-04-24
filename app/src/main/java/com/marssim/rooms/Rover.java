@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * Created by pg on 23/04/16.
  */
-public class Workshop extends AbstractRoom implements Serializable{
+public class Rover extends AbstractRoom implements Serializable{
     @Override
     public void getResourcesChange(BaseResources baseResources, int timeTicksPassed) {
         defaultEnergySubtract(baseResources);
@@ -27,12 +27,12 @@ public class Workshop extends AbstractRoom implements Serializable{
 
     @Override
     public int getImage(){
-        return R.drawable.maly_warsztat;
+        return R.drawable.maly_lazik;
     }
 
     @Override
     public int getButton(){
-        return R.id.imageButtonWorkshop;
+        return R.id.imageButtonRover;
     }
 
 }

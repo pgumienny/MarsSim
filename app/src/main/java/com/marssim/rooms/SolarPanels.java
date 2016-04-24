@@ -37,4 +37,10 @@ public class SolarPanels extends AbstractRoom implements Serializable{
     public int getImage(){
         return R.drawable.panele_sloneczne;
     }
+
+    @Override
+    public int getButton(){
+        return R.id.imageButtonSolarPanels;
+    }
+
 }

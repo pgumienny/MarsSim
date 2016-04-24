@@ -24,6 +24,11 @@ public class Greenhouse extends AbstractRoom implements Serializable{
         return R.drawable.szklarnia;
     }
 
+    @Override
+    public int getButton(){
+        return R.id.imageButtonGreenhouse;
+    }
+
     public Property getNumberOfPlants() {
         return numberOfPlants;
     }

@@ -43,8 +43,6 @@ public class RoomAcitivity extends GameStateActivity {
 
         ImageView img = (ImageView) findViewById(R.id.imageViewFeature);
 
-        int imgres;
-
         AbstractRoom currentRoom2 = GameState.getGameState().getRoomCollection().getRooms().get(GameState.getGameState().getCurrentRoomId());
 
         img.setImageResource(currentRoom2.getImage());

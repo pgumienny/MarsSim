@@ -26,6 +26,11 @@ public class Gym extends AbstractRoom implements Serializable{
     }
 
     @Override
+    public int getButton(){
+        return R.id.imageButtonGym;
+    }
+
+    @Override
     public int upgrade(Astronaut astronaut, BaseResources resources) {
         return 0;
     }

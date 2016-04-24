@@ -26,6 +26,11 @@ public class EntertainmentRoom extends AbstractRoom implements Serializable{
     }
 
     @Override
+    public int getButton(){
+        return R.id.imageButtonEntertainmentRoom;
+    }
+
+    @Override
     public int upgrade(Astronaut astronaut, BaseResources resources) {
         return 0;
     }

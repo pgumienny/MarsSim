@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButtonGreenhouse"
-        android:src="@drawable/ikona_laboratorium"
+        android:src="@drawable/ikona_szklarnia"
         android:layout_below="@+id/progressBarEntertainment"
         android:layout_alignRight="@+id/progressBarEntertainment"
         android:layout_alignEnd="@+id/progressBarEntertainment" />
@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButtonSolarPanels"
-        android:src="@drawable/ikona_silownia"
+        android:src="@drawable/panale_sloneczne_ikona"
         android:layout_below="@+id/imageButtonGreenhouse"
         android:layout_alignLeft="@+id/imageButtonGreenhouse"
         android:layout_alignStart="@+id/imageButtonGreenhouse" />
@@ -58,7 +58,7 @@
         android:layout_alignRight="@+id/imageButtonSolarPanels"
         android:layout_alignEnd="@+id/imageButtonSolarPanels"
         android:layout_below="@+id/imageButtonSolarPanels"
-        android:src="@drawable/ikona_sypialnia" />
+        android:src="@drawable/ikona_silownia" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
         android:layout_below="@+id/imageButtonGym"
         android:layout_alignRight="@+id/imageButtonGym"
         android:layout_alignEnd="@+id/imageButtonGym"
-        android:src="@drawable/ikona_szklarnia" />
+        android:src="@drawable/ikona_laboratorium" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
         android:layout_below="@+id/imageButtonLaboratory"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/ikona_szklarnia" />
+        android:src="@drawable/warsztat_ikona" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
         android:layout_below="@+id/imageButtonWorkshop"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/ikona_sypialnia" />
+        android:src="@drawable/fun_ikona" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -94,7 +94,7 @@
         android:layout_below="@+id/imageButtonEntertainmentRoom"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/ikona_laboratorium" />
+        android:src="@drawable/ikona_sypialnia" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -103,7 +103,7 @@
         android:layout_below="@+id/imageButtonBedroom"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/ikona_laboratorium" />
+        android:src="@drawable/jadalnia_ikona" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -129,7 +129,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
+        android:text=" "
         android:id="@+id/textViewNotification"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
@@ -165,20 +165,20 @@
         android:text="Health"
         android:id="@+id/textViewHeatlh"
         android:textColor="#ffffff"
-        android:layout_alignBottom="@+id/progressBarRest"
-        android:layout_toRightOf="@+id/progressBarRest"
-        android:layout_toEndOf="@+id/progressBarRest" />
+        android:layout_above="@+id/imageButtonGreenhouse"
+        android:layout_toLeftOf="@+id/progressBarHealth"
+        android:layout_toStartOf="@+id/progressBarHealth" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Entertainment"
+        android:text="Entertain"
         android:id="@+id/textViewEntertainment"
         android:textColor="#ffffff"
-        android:layout_alignBottom="@+id/progressBarHealth"
-        android:layout_toRightOf="@+id/progressBarHealth"
-        android:layout_toEndOf="@+id/progressBarHealth" />
+        android:layout_above="@+id/imageButtonGreenhouse"
+        android:layout_toLeftOf="@+id/progressBarEntertainment"
+        android:layout_toStartOf="@+id/progressBarEntertainment" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
@@ -187,7 +187,8 @@
         android:id="@+id/progressBarSatiety"
         android:layout_below="@+id/buttonBase"
         android:layout_toRightOf="@+id/textViewSatiety"
-        android:layout_toEndOf="@+id/textViewSatiety" />
+        android:layout_toEndOf="@+id/textViewSatiety"
+        android:background="#ffffff" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
@@ -196,16 +197,18 @@
         android:id="@+id/progressBarRest"
         android:layout_below="@+id/buttonBase"
         android:layout_toRightOf="@+id/textViewRest"
-        android:layout_toEndOf="@+id/textViewRest" />
+        android:layout_toEndOf="@+id/textViewRest"
+        android:background="#ffffff" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/progressBarHealth"
+        android:background="#ffffff"
         android:layout_below="@+id/buttonBase"
-        android:layout_toRightOf="@+id/textViewHeatlh"
-        android:layout_toEndOf="@+id/textViewHeatlh" />
+        android:layout_toLeftOf="@+id/textViewEntertainment"
+        android:layout_toStartOf="@+id/textViewEntertainment" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
@@ -214,6 +217,16 @@
         android:id="@+id/progressBarEntertainment"
         android:layout_alignBottom="@+id/textViewRest"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:background="#ffffff" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewAstronaut"
+        android:layout_alignTop="@+id/imageButtonGreenhouse"
+        android:src="@drawable/astronautGym"
+        android:layout_toLeftOf="@+id/imageButtonGreenhouse"
+        android:layout_toStartOf="@+id/imageButtonGreenhouse" />
 
 </RelativeLayout>

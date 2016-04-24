@@ -144,11 +144,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageViewAstronaut"
-        android:layout_below="@+id/textViewSatiety"
         android:src="@drawable/astronaut1"
-        android:layout_above="@+id/buttonInstructions"
         android:layout_toLeftOf="@+id/progressBarHealth"
         android:layout_toEndOf="@+id/progressBarRest"
+        android:layout_alignTop="@+id/imageViewFeature"
+        android:layout_alignBottom="@+id/imageViewFeature"
         android:layout_alignLeft="@+id/textViewHeatlh"
         android:layout_alignStart="@+id/textViewHeatlh" />
 

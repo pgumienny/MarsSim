@@ -32,8 +32,6 @@ public class GameStateActivity extends Activity {
 
         gameState = GameState.getGameState();
 
-        setContentView(R.layout.base_resources_layout);
-
         Button btnReturn = (Button) findViewById(R.id.buttonReturn);
 
         Intent i = getIntent();

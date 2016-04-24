@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.marssim.Astronaut;
 import com.marssim.BaseResources;
+import com.marssim.GameState;
 import com.marssim.Property;
 import com.marssim.R;
 
@@ -26,5 +27,11 @@ import java.util.TimerTask;
 public class BaseActivity extends GameStateActivity {
     /** Called when the activity is first created. */
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        setContentView(R.layout.base_resources_layout);
+        super.onCreate(savedInstanceState);
+
+    }
 
 }

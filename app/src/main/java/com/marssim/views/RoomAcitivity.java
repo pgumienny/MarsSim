@@ -30,25 +30,11 @@ import com.marssim.R;
 
 
 
-public class RoomAcitivity extends Activity {
+public class RoomAcitivity extends GameStateActivity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.room_layout);
-
-        Button btnReturn = (Button) findViewById(R.id.buttonReturn);
-
-        Intent i = getIntent();
-
-        // Binding Click event to Button
-        btnReturn.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View arg0) {
-                //Closing SecondScreen Activity
-                finish();
-            }
-        });
-
+        super.onCreate(savedInstanceState);
     }
 }

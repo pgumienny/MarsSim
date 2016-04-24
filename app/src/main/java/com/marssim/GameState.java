@@ -1,5 +1,7 @@
 package com.marssim;
 
+import java.util.ArrayList;
+
 /**
  * Created by pg on 23/04/16.
  */
@@ -10,6 +12,26 @@ public class GameState implements java.io.Serializable {
     private BaseResources baseResources;
     private Astronaut astronaut;
     private Integer ticksPassed;
+
+    public Integer getCurrentRoomId() {
+        return currentRoomId;
+    }
+
+    public void setCurrentRoomId(Integer currentRoomId) {
+        this.currentRoomId = currentRoomId;
+    }
+
+    private Integer currentRoomId;
+
+    public ArrayList<MarsNotification> getNotifications() {
+        return notifications;
+    }
+
+    public void setNotifications(ArrayList<MarsNotification> notifications) {
+        this.notifications = notifications;
+    }
+
+    private ArrayList<MarsNotification> notifications;
 
     public Integer getTicksPassed() {
         return ticksPassed;
@@ -23,7 +45,9 @@ public class GameState implements java.io.Serializable {
         roomCollection = new RoomCollection();
         baseResources = new BaseResources();
         astronaut = new Astronaut();
+        notifications = new ArrayList<>();
         ticksPassed = 0;
+        currentRoomId = 0;
     }
 
     static public GameState getGameState(){

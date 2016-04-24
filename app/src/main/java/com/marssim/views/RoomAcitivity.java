@@ -1,6 +1,7 @@
 package com.marssim.views;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Layout;
@@ -20,6 +21,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.marssim.Astronaut;
+import com.marssim.GameState;
 import com.marssim.Property;
 import com.marssim.R;
 
@@ -36,5 +38,26 @@ public class RoomAcitivity extends GameStateActivity {
     public void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.room_layout);
         super.onCreate(savedInstanceState);
+
+        Button btnReturn = (Button) findViewById(R.id.buttonRooms);
+
+        Intent i = getIntent();
+
+        // Binding Click event to Button
+        btnReturn.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View arg0) {
+                //Closing SecondScreen Activity
+                GameState.getGameState().getRoomCollection().getRooms().get(GameState.getGameState().getCurrentRoomId()).upgrade(GameState.getGameState().getAstronaut(), GameState.getGameState().getBaseResources());
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getApplicationContext());
+                alertDialogBuilder.setTitle("Zoria");
+                alertDialogBuilder.setMessage("room upgraded");
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+
+            }
+        });
+
     }
 }

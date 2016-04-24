@@ -1,12 +1,19 @@
 package com.marssim;
 
+import android.content.Intent;
 import android.os.Handler;
 import java.util.Timer;
 import java.util.TimerTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.marssim.views.RoomView;
 
 
 public class MarsBase extends AppCompatActivity {
@@ -16,6 +23,7 @@ public class MarsBase extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mars_base);
+
 
         restoreState();
 
@@ -38,7 +46,21 @@ public class MarsBase extends AppCompatActivity {
             }
         };
         timer.scheduleAtFixedRate(timerTask, 0, 100);
+        setButtonListenerGreenHouse();
 
+    }
+
+    private void setButtonListenerGreenHouse(){
+
+        final ImageButton btnGreenHouse = (ImageButton)findViewById(R.id.imageButtonGreenhouse);
+
+        // Set up onClick listeners for buttons to send 1 or 0 to turn on/off LED
+        btnGreenHouse.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent act2 = new Intent(v.getContext(),RoomView.class);
+                startActivity(act2);
+            }
+        });
     }
 
     private void updateViews(){

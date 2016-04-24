@@ -47,12 +47,32 @@ public class MarsBase extends AppCompatActivity {
         tt1.setText(gameState.getTimeString());
 
         Astronaut astronaut = gameState.getAstronaut();
+        BaseResources baseResources = gameState.getBaseResources();
 
         updateProgressBar(R.id.progressBarEntertainment, astronaut.getEntertainmentLevel());
         updateProgressBar(R.id.progressBarHealth, astronaut.getHealth());
         updateProgressBar(R.id.progressBarRest, astronaut.getWellRested());
         updateProgressBar(R.id.progressBarSatiety, astronaut.getSatiety());
 
+        updateResourcesWithProp(R.id.textViewEnergy, R.id.progressBarEnergy, baseResources.getEnergy());
+        updateResourcesWithProp(R.id.textViewFood, R.id.progressBarFood, baseResources.getFood());
+        updateResourcesWithProp(R.id.textViewOxygen, R.id.progressBarOxygen, baseResources.getOxygen());
+        updateResourcesWithProp(R.id.textViewDevelopment, R.id.progressBarDevelopment, baseResources.getTechnologyPoints());
+        updateResourcesWithProp(R.id.textViewWater, R.id.progressBarWater, baseResources.getWater());
+    }
+
+    private void updateResourcesWithProp(int textViewId, int progressBarId, Property prop){
+        updateProgressBar(progressBarId, prop);
+        updateTextView(textViewId, prop);
+    }
+
+    private void updateTextView(int id, Property prop){
+        TextView tv = (TextView) findViewById(id);
+        StringBuilder sb = new StringBuilder();
+        sb.append((int) prop.getValue());
+        sb.append('/');
+        sb.append((int) prop.getMax());
+        tv.setText(sb.toString());
     }
 
     private void updateProgressBar(int id, Property prop){
